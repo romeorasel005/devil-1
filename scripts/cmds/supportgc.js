@@ -1,4 +1,4 @@
-+cmd install supportgc.js module.exports = {
+module.exports = {
 	config: {
 		name: "supportgc",
 		version: "1.0",
