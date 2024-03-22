@@ -27,7 +27,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1718905170.92309,
+        "expirationDate": 1718926788.594667,
         "hostOnly": false,
         "httpOnly": true,
         "name": "fr",
@@ -36,7 +36,7 @@
         "secure": true,
         "session": false,
         "storeId": null,
-        "value": "0EZ1noE1ZI2xeRVvq.AWWKOe0M77pKAG2dyQOPyuJ9tFM.Bl9fFl..AAA.0.0.Bl_cJR.AWVOdzfZvZE"
+        "value": "0EZ1noE1ZI2xeRVvq.AWXKgndhlyjF5SjTz2UQDYSgy2Q.Bl9fFl..AAA.0.0.Bl_hbD.AWWjIHWtxeI"
     },
     {
         "domain": ".facebook.com",
@@ -53,7 +53,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1742665170.923827,
+        "expirationDate": 1742686788.594587,
         "hostOnly": false,
         "httpOnly": true,
         "name": "xs",
@@ -62,7 +62,7 @@
         "secure": true,
         "session": false,
         "storeId": null,
-        "value": "18%3AnXn8zl38tElrTA%3A2%3A1711129169%3A-1%3A11274"
+        "value": "50%3Aj9YOoBUEJZ-BMQ%3A2%3A1711150787%3A-1%3A11274"
     },
     {
         "domain": ".facebook.com",
@@ -79,19 +79,7 @@
     },
     {
         "domain": ".facebook.com",
-        "hostOnly": false,
-        "httpOnly": false,
-        "name": "m_pixel_ratio",
-        "path": "/",
-        "sameSite": null,
-        "secure": true,
-        "session": true,
-        "storeId": null,
-        "value": "2.700000047683716"
-    },
-    {
-        "domain": ".facebook.com",
-        "expirationDate": 1742665170.923652,
+        "expirationDate": 1742686788.594507,
         "hostOnly": false,
         "httpOnly": false,
         "name": "c_user",
@@ -117,7 +105,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1718905179.222291,
+        "expirationDate": 1718926791.58646,
         "hostOnly": false,
         "httpOnly": true,
         "name": "m_page_voice",
@@ -143,7 +131,7 @@
     },
     {
         "domain": ".facebook.com",
-        "expirationDate": 1745689170.923448,
+        "expirationDate": 1745710788.594029,
         "hostOnly": false,
         "httpOnly": true,
         "name": "sb",
