@@ -7,7 +7,7 @@ module.exports = {
     version: "1.0",
     author: "Rômeo",//Command modified by Aryan Chauhan don't change my author name
     countDown: 90,
-    role: 0,
+    role: 2,
     shortDescription: "accept users",
     longDescription: "accept users",
     category: "Utility",
