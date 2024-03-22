@@ -36,7 +36,7 @@ module.exports = {
 			turnedOnWithReason: "✅ | Do not disturb mode has been turned on with reason: %1",
 			turnedOnWithoutReason: "✅ | Do not disturb mode has been turned on",
 			alreadyOn: "User %1 is currently busy",
-			alreadyOnWithReason: "User %1 is currently busy with reason: %2"
+			alreadyOnWithReason: "𝗠𝘆 𝗢𝘄𝗻𝗲𝗿\n\n%1\n\n𝗰𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆 𝗯𝘂𝘀𝘆 𝗻𝗼𝘄\n𝗥𝗲𝗮𝘀𝗼𝗻: %2"
 		}
 	},
 
