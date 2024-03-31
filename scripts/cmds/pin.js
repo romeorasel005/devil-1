@@ -1,70 +1,66 @@
-const axios = require("axios");
-const fs = require("fs-extra");
-const path = require("path");
-
-/*Do not change
-        the credit 🐢👑🥴*/
-
+const fs = require("fs-extra")
+const axios = require("axios")
 module.exports = {
-  config: {
-    name: "pinterest",
-    aliases: ["pin"],
-    version: "1.0",
-    author: " Rajveer | Aayush",
-    role: 0,
-    countDown: 2,
-    longDescription: {
-      en: "Get Image From Pinterest",
-    },
-    category: "image",
-    guide: {
-      en: "{pn} <search query> <number of images>\nExample: {pn} Tomozaki -5"
+        config: {
+                name: "pin",
+                version: "1.1",
+                author: "Rishad",
+                countDown: 60,
+                role: 0,
+                shortDescription: {
+                        vi: "Xem uid",
+                        en: "get pictures from Pinterest"
+                },
+                longDescription: {
+                        uid: "Xem user id facebook của người dùng",
+                        en: "get pictures from Pinterest"
+                },
+                category: "picture ",
+                guide: {
+                        vi: "   {pn}: dùng để xem id facebook của bạn"
+                                + "\n   {pn} @tag: xem id facebook của những người được tag"
+                                + "\n   {pn} <link profile>: xem id facebook của link profile",
+                        en: "   {pn} <picture name> < - number of pictures you want(1-9)>"
+                                + "\n   example: {pn} naruto-9"
+                }
+        },
+
+        langs: {
+                vi: {
+                        syntaxError: "Vui lòng tag người muốn xem uid hoặc để trống để xem uid của bản thân"
+                },
+                en: {
+                        syntaxError: "Baka! that's not how you do it\nlearn first!"
+                }
+        },
+
+        onStart: async function ({ api, message, event, args, getLang }) 
+  {
+
+    const keySearch = args.join(" ");
+    if(keySearch.includes("-") == false) return api.sendMessage('Please enter in the format, example: pinterest Naruto - 9 (it depends on you how many images(1-9) you want to appear in the result)', event.threadID, event.messageID)
+    const keySearchs = keySearch.substr(0, keySearch.indexOf('-'))
+    let numberSearch = keySearch.split("-").pop() || 6
+    if(numberSearch>9){
+      numberSearch = 9
     }
-  },
-
-  onStart: async function ({ api, event, args }) {
-    try {
-      const keySearch = args.join(" ");
-      if (!keySearch.includes("-")) {
-        return api.sendMessage(
-          "Please enter the search query and -number of images (1-6)",
-          event.threadID,
-          event.messageID
-        );
-      }
-      const keySearchs = keySearch.substr(0, keySearch.indexOf("-"));
-      let numberSearch = keySearch.split("-").pop() || 9;
-      if (numberSearch > 9) {
-        numberSearch = 9;
-      }
-
-      const apiUrl = `https://api-samirxyz.onrender.com/api/Pinterest?query=${encodeURIComponent(keySearchs)}& number=${numberSearch}&apikey=global`;
-
-      const res = await axios.get(apiUrl);
-      const data = res.data.result;
-      const imgData = [];
-
-      for (let i = 0; i < Math.min(numberSearch, data.length); i++) {
-        const imgResponse = await axios.get(data[i], {
-          responseType: "arraybuffer"
-        });
-        const imgPath = path.join(__dirname, "cache", `${i + 1}.jpg`);
-        await fs.outputFile(imgPath, imgResponse.data);
-        imgData.push(fs.createReadStream(imgPath));
-      }
-
-      await api.sendMessage({
+    const res = await axios.get(`https://for-devs.onrender.com/api/pin?apikey=fuck&search=${encodeURIComponent(keySearchs)}`);
+    const data = res.data.data;
+    var num = 0;
+    var imgData = [];
+    for (var i = 0; i < parseInt(numberSearch); i++) {
+      let path = __dirname + `/tmp/${num+=1}.jpg`;
+      let getDown = (await axios.get(`${data[i]}`, { responseType: 'arraybuffer' })).data;
+      fs.writeFileSync(path, Buffer.from(getDown, 'utf-8'));
+      imgData.push(fs.createReadStream(__dirname + `/tmp/${num}.jpg`));
+    }
+    api.sendMessage({
         attachment: imgData,
-      }, event.threadID, event.messageID);
-
-      await fs.remove(path.join(__dirname, "cache"));
-    } catch (error) {
-      console.error(error);
-      return api.sendMessage(
-        `An error occurred.`,
-        event.threadID,
-        event.messageID
-      );
+        body: numberSearch + ' Search results for keyword: '+ keySearchs
+    }, event.threadID, event.messageID)
+    for (let ii = 1; ii < parseInt(numberSearch); ii++) {
+        fs.unlinkSync(__dirname + `/tmp/${ii}.jpg`)
     }
-  }
+}
+
 };
