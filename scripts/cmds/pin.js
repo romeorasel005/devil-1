@@ -2,7 +2,8 @@ const fs = require("fs-extra")
 const axios = require("axios")
 module.exports = {
         config: {
-                name: "pin",
+                name: "pinterest",
+                aliases: ["pin"],
                 version: "1.1",
                 author: "Rishad",
                 countDown: 60,
