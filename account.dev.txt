@@ -79,18 +79,6 @@
     },
     {
         "domain": ".facebook.com",
-        "hostOnly": false,
-        "httpOnly": false,
-        "name": "m_pixel_ratio",
-        "path": "/",
-        "sameSite": null,
-        "secure": true,
-        "session": true,
-        "storeId": null,
-        "value": "2.700000047683716"
-    },
-    {
-        "domain": ".facebook.com",
         "expirationDate": 1743714083.815007,
         "hostOnly": false,
         "httpOnly": false,
@@ -114,6 +102,19 @@
         "session": false,
         "storeId": null,
         "value": "2.9685065746307373"
+    },
+    {
+        "domain": ".facebook.com",
+        "expirationDate": 1719954951.763531,
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "m_page_voice",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "100039688877651"
     },
     {
         "domain": ".facebook.com",
