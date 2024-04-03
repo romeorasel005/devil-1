@@ -3,7 +3,7 @@
 
 ## Introduction
 
-#### Join us in [𝗖𝗵𝗮𝘁𝗕𝗼𝘁 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 𝗟𝘁𝗱. ㋡](https://www.facebook.com/groups/766348885046753/?ref=share)🌸
+#### Join us in [𝗖𝗵𝗮𝘁𝗕𝗼𝘁 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 𝗟𝘁𝗱. ㋡](https://www.facebook.com/groups/766348885046753/?ref=share)
 ###### If you encounter any issues or difficulties, don't hesitate to reach out and ask for assistance here. Our team is here to help you with any problems you may face.
 
 [<img align="center" src="https://i.imgur.com/M2bZSef.jpg">](https://www.facebook.com/profile.php?id=100080202774643)
