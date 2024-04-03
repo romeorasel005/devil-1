@@ -4,8 +4,8 @@ const { getPrefix, getStreamFromURL } = global.utils;
 
 module.exports = {
   config: {
-    name: "device",
-    aliases: ["deviceinfo],
+    name: "deviceinfo",
+    aliases: ["device"],
     version: "1.0",
     author: "Rishad",
     countDown: 15,
